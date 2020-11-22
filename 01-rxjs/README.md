@@ -3,6 +3,91 @@
 In this lesson we will learn about best practices for dealing with async code.
 We will also learn to use `RXJS` to help us deal with our async code.
 
+## Async code
+
+```
+setTimeout(() => {
+	console.log('hello world')
+}, 1000)
+
+setInterval(() => {
+	console.log('hello world')
+}, 1000)
+```
+
+- Server requests
+- Events
+- Promise
+- Timers
+- websocket
+
+## bad patterns
+
+- callback hell
+
+```
+someAsyncFunction1(() => {
+	someAsyncFunction2(() => {
+		someAsyncFunction3(() => {
+			
+		})
+	})
+})
+```
+
+- parallel async code 
+
+```
+someAsyncFunction1(() => {
+})
+someAsyncFunction2(() => {
+})
+```
+
+## classify your async code
+
+transfer your async code to marbel diagram
+
+-------+--------+-----+--|-->
+
+-------+--------+-----+--X-->
+
+-------+--------+-----+----+------>
+
+-------+-|>
+
+-------X--->
+
+## Promise
+
+## RXJS
+
+## To run typescript code
+
+```
+mkdir 01-rxjs
+cd 01-rxjs
+npm init --yes
+npm install typescript -D
+npm install ts-node
+npx ts-node file-name.ts
+```
+
+## 1. Observable VS Promise
+
+- observable can call next multiple times
+- promise can call resolve once
+
+## 2. Observable VS Promise
+
+- Promise will run the async function **once** regardless of the amount of listeners
+- Observable will not run the async function (lazy), and will run once for every listener.  
+duplicates the data stream for every listener.  
+
+
+
+
+
 ## Lesson Plan
 
 - What is async code
