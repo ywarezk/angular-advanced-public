@@ -1,3 +1,4 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -18,31 +19,7 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "hello": [
-        "dist/hello/hello",
-        "dist/hello"
-      ],
-      "@nz/hello": [
-        "dist/nz/hello/nz-hello",
-        "dist/nz/hello"
-      ],
-      "@nz/hello@dev": [
-        "projects/nz/hello/src/public-api.ts"
-      ],
-      "@nz/test": [
-        "dist/nz/test/nz-test",
-        "dist/nz/test"
-      ],
-      "@nz/auth": [
-        "dist/nz/auth/nz-auth",
-        "dist/nz/auth"
-      ],
-      "@nz/auth@dev": [
-        "projects/nz/auth/src/public-api.ts"
-      ]
-    }
+    ]
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

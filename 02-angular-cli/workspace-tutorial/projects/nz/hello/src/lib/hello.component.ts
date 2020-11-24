@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'lib-hello',
   template: `
     <p>
-      Pigletshvily Chaitovsky!
+      Pigletshvily Chaitovsky345345!
     </p>
   `,
   styles: [

@@ -1,0 +1,117 @@
+<h1>
+  @Input()
+</h1>
+
+<p>
+  parent can pass data to child
+</p>
+
+<app-input-exampe1 message="hello world" [stamNumber]="myNumVar" ></app-input-exampe1>
+
+<h2>
+  @Output
+</h2>
+
+<app-output-exampe2 (hello)="sayHello($event)"></app-output-exampe2>
+
+<h2>
+Template Reference Variable
+</h2>
+
+<p #helloP>
+hello
+</p>
+
+<app-trv3 #trv="trv3" ></app-trv3>
+
+<button (click)="trv.play()">
+Play
+</button>
+
+<form #grabDirective="ngForm">
+  <input name="stam" [(ngModel)]="stamInput" #grabNgModel="ngModel" />
+</form>
+
+<ng-template #someTemplate>
+  <p>This is a repeating error message</p>
+</ng-template>
+
+<!--
+<p>
+  {{ randomNum() }}
+</p> -->
+
+
+<!-- <div *ngTemplateOutlet="someTemplate">
+</div>
+
+
+<div *ngTemplateOutlet="someTemplate">
+</div>
+
+<div *ngTemplateOutlet="someTemplate">
+</div> -->
+
+
+<div #container>
+</div>
+
+<!-- passing ng-template to a directive -->
+<div *ngIf="someCondition">
+  <h1>hello world</h1>
+</div>
+
+<!--
+<ng-template [NgIf]="condition" >
+  <div>
+    <h1>hello world</h1>
+  </div>
+</ng-template> -->
+
+<!--
+  <div *withUser="let pigletUser">
+    <h1>
+      {{pigletUser.firstName}}
+    </h1>
+    <h1>
+      {{pigletUser.lastName}}
+    </h1>
+  </div>
+
+  <ng-template withUser let-pigletUser>
+    <h1>
+      {{pigletUser.firstName}}
+    </h1>
+    <h1>
+      {{pigletUser.lastName}}
+    </h1>
+  </ng-template>
+
+  <div *withRole="admin">
+    <h1>
+      {{pigletUser.firstName}}
+    </h1>
+    <h1>
+      {{pigletUser.lastName}}
+    </h1>
+  </div>
+
+ -->
+<!-- <div>
+  <h1>
+    {{(user$ | async).firstName}}
+  </h1>
+  <h1>
+    {{(user$ | async).lastName}}
+  </h1>
+</div> -->
+
+
+<div *withUser="let pigletUser">
+  <h1>
+    {{pigletUser.firstName}}
+  </h1>
+  <h1>
+    {{pigletUser.lastName}}
+  </h1>
+</div>

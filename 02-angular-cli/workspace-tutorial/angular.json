@@ -322,6 +322,46 @@
           }
         }
       }
+    },
+    "@nz/auth": {
+      "projectType": "library",
+      "root": "projects/nz/auth",
+      "sourceRoot": "projects/nz/auth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/nz/auth/tsconfig.lib.json",
+            "project": "projects/nz/auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nz/auth/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nz/auth/src/test.ts",
+            "tsConfig": "projects/nz/auth/tsconfig.spec.json",
+            "karmaConfig": "projects/nz/auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nz/auth/tsconfig.lib.json",
+              "projects/nz/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ynet"

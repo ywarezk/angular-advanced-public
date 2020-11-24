@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +16,17 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'pnay-plus';
+
+  constructor(private _http: HttpClient) {}
 
   someObj = {
     title: 'hello',
     description: 'world'
+  }
+
+  ngOnInit() {
+    this._http.get('https://nztodo.herokuapp.com/api/tasks/?format=json').subscribe();
   }
 }
