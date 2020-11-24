@@ -1,5 +1,76 @@
 # @angular/cli
 
+## Workspace VS Project/application
+
+workspace angular - multiple angular web sites  
+you can place in a workspace angular libraries.  
+
+## Application
+
+- website
+
+## Project
+
+- number websites
+
+## Monorepository
+
+every angular website is under one workspace.  
+every project in one workspace
+
+## workspace per project
+
+- workspace nerdeez
+  
+  - workspace alison
+  - workspace bugeez
+  - workspace academeez
+
+workspace per project  
+number of websites
+
+- number of website
+- libraries
+
+
+## summary
+
+- workspace has number application, libraries  
+- libraries can bring utils to different application.  
+- If Im creating something that can serve me in multiple application, I should place it in a library.
+
+## Summary commands
+
+- generate a new workspace
+```bash
+npx @angular/cli new <workspace-name> --create-application=false
+```
+
+- create website in the workspace
+```bash
+npx ng g application <name-of-site>
+```
+
+- start development server for a website
+
+```bash
+npx ng serve <name-of-site>
+```
+
+- create new library
+
+```
+npx ng g library <name-of-library>
+```
+
+- create in library something
+
+```
+npx ng g c Hello --project @nz/hello
+```
+
+
+
 ## Lesson Plan
 
 - creating a workspace

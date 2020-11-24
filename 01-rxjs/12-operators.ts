@@ -12,9 +12,24 @@ manipulation:
   
 operators are functions
 
+of(1);
+of([1,2,3]);
+of('hello');
+
+from(somePromise)
+from([1,2,3])
+
+fromEvent(domElement, 'click')
+
 function interval(num) {
 	return new Observalbe(...)
 }
+
+filter
+map
+debounceTime
+catchError
+
 
 function map(cb) {
 	return function(oldObservable) {

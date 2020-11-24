@@ -1,0 +1,328 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ynet": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ynet",
+      "sourceRoot": "projects/ynet/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ynet",
+            "index": "projects/ynet/src/index.html",
+            "main": "projects/ynet/src/main.ts",
+            "polyfills": "projects/ynet/src/polyfills.ts",
+            "tsConfig": "projects/ynet/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ynet/src/favicon.ico",
+              "projects/ynet/src/assets"
+            ],
+            "styles": [
+              "projects/ynet/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ynet/src/environments/environment.ts",
+                  "with": "projects/ynet/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ynet:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ynet:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ynet:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ynet/src/test.ts",
+            "polyfills": "projects/ynet/src/polyfills.ts",
+            "tsConfig": "projects/ynet/tsconfig.spec.json",
+            "karmaConfig": "projects/ynet/karma.conf.js",
+            "assets": [
+              "projects/ynet/src/favicon.ico",
+              "projects/ynet/src/assets"
+            ],
+            "styles": [
+              "projects/ynet/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ynet/tsconfig.app.json",
+              "projects/ynet/tsconfig.spec.json",
+              "projects/ynet/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ynet/e2e/protractor.conf.js",
+            "devServerTarget": "ynet:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ynet:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "pnay-plus": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/pnay-plus",
+      "sourceRoot": "projects/pnay-plus/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/pnay-plus",
+            "index": "projects/pnay-plus/src/index.html",
+            "main": "projects/pnay-plus/src/main.ts",
+            "polyfills": "projects/pnay-plus/src/polyfills.ts",
+            "tsConfig": "projects/pnay-plus/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/pnay-plus/src/favicon.ico",
+              "projects/pnay-plus/src/assets"
+            ],
+            "styles": [
+              "projects/pnay-plus/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/pnay-plus/src/environments/environment.ts",
+                  "with": "projects/pnay-plus/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "pnay-plus:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "pnay-plus:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pnay-plus:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pnay-plus/src/test.ts",
+            "polyfills": "projects/pnay-plus/src/polyfills.ts",
+            "tsConfig": "projects/pnay-plus/tsconfig.spec.json",
+            "karmaConfig": "projects/pnay-plus/karma.conf.js",
+            "assets": [
+              "projects/pnay-plus/src/favicon.ico",
+              "projects/pnay-plus/src/assets"
+            ],
+            "styles": [
+              "projects/pnay-plus/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pnay-plus/tsconfig.app.json",
+              "projects/pnay-plus/tsconfig.spec.json",
+              "projects/pnay-plus/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/pnay-plus/e2e/protractor.conf.js",
+            "devServerTarget": "pnay-plus:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "pnay-plus:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "@nz/hello": {
+      "projectType": "library",
+      "root": "projects/nz/hello",
+      "sourceRoot": "projects/nz/hello/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/nz/hello/tsconfig.lib.json",
+            "project": "projects/nz/hello/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nz/hello/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nz/hello/src/test.ts",
+            "tsConfig": "projects/nz/hello/tsconfig.spec.json",
+            "karmaConfig": "projects/nz/hello/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nz/hello/tsconfig.lib.json",
+              "projects/nz/hello/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@nz/test": {
+      "projectType": "library",
+      "root": "projects/nz/test",
+      "sourceRoot": "projects/nz/test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/nz/test/tsconfig.lib.json",
+            "project": "projects/nz/test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nz/test/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nz/test/src/test.ts",
+            "tsConfig": "projects/nz/test/tsconfig.spec.json",
+            "karmaConfig": "projects/nz/test/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nz/test/tsconfig.lib.json",
+              "projects/nz/test/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ynet"
+}

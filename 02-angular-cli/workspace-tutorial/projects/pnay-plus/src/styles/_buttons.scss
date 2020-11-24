@@ -1,0 +1,14 @@
+
+/**
+ * every button should this class
+ */
+.btn {
+  border: 1px solid red;
+}
+
+/**
+ * default submit button should have this class
+ */
+.btn-primary {
+  background-color: $bg-color-primary;
+}
