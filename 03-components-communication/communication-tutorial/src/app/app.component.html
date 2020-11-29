@@ -139,3 +139,19 @@ Play
   </ng-template>
 
 </app-card>
+
+<h2>
+  Structural Directive Role
+</h2>
+
+<div *withUserRole="'admin'; else guest; let user">
+  <h1>
+    You are a admin {{user.name}}
+  </h1>
+</div>
+
+<ng-template #guest>
+  <h1>
+    You are a guest
+  </h1>
+</ng-template>

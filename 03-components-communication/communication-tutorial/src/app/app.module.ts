@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { WithUserDirective } from './with-user.directive';
 import { NgTemplateExampleComponent } from './ng-template-example4/ng-template-example.component';
 import { CardComponent } from './card5/card.component';
+import { WithUserRoleDirective } from './ex-with-role/with-user-role.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CardComponent } from './card5/card.component';
     TRV3Component,
     WithUserDirective,
     NgTemplateExampleComponent,
+    WithUserRoleDirective,
     CardComponent
   ],
   imports: [
