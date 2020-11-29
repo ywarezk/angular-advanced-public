@@ -1,3 +1,26 @@
+/**
+
+<div *withUser="let user; else guestUser">
+  <h1>
+    hello user {{user}}
+  </h1>
+</div>
+<ng-template #guestUser>
+  <h1>
+    hello guest
+  </h1>
+</ng-template>
+
+<div *ngIf="someCondition">
+</div>
+
+<ng-template [ngIf]="someCondition">
+  <div>
+  </div>
+</ng-template>
+
+ */
+
 import { Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 

@@ -31,6 +31,27 @@ This will allow us to create a more generic and reusable components.
 - Child2 will grab the instance of GrandChild2 and will call a function that returns a string in the AfterViewInit and will print that string in his template.
 - App will transfer ng-content to Child1
 
+## EX.
+
+```
+<div *withUserRole="'admin'; else notAdmin; let user">
+	<h1>Hello Admin {{user.name}}</h1>
+</div>
+<ng-template #notAdmin>
+	<h1>
+		You are not authorized
+	</h1>
+</ng-template>
+
+@Injectable()
+export class UserService {
+	user$ = new BehaviourSubject({
+		name: 'Yariv',
+		role: 'admin'
+	})
+}
+```
+
 ## EX
 
 In this ex you will create a completely configurable Login component

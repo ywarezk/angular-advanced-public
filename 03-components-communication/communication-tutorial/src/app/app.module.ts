@@ -7,6 +7,8 @@ import { OutputExampe2Component } from './output-exampe2/output-exampe2.componen
 import { TRV3Component } from './trv3/trv3.component';
 import { FormsModule } from '@angular/forms';
 import { WithUserDirective } from './with-user.directive';
+import { NgTemplateExampleComponent } from './ng-template-example4/ng-template-example.component';
+import { CardComponent } from './card5/card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { WithUserDirective } from './with-user.directive';
     InputExampe1Component,
     OutputExampe2Component,
     TRV3Component,
-    WithUserDirective
+    WithUserDirective,
+    NgTemplateExampleComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

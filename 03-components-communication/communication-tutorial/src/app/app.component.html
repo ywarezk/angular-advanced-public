@@ -115,3 +115,27 @@ Play
     {{pigletUser.lastName}}
   </h1>
 </div>
+
+
+<h1>
+  ng-template
+</h1>
+
+<ng-template-example></ng-template-example>
+
+
+<h2>
+  Ng-content
+</h2>
+
+<app-card>
+  <ng-template let-user>
+    <div>
+      <h1>My Header {{user}}</h1>
+      <p>
+        this is explaining the header
+      </p>
+    </div>
+  </ng-template>
+
+</app-card>
