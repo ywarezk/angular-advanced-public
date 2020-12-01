@@ -2,6 +2,21 @@
 
 In this lesson we will cover advanced topics regarding the DI.
 
+```
+@Component({
+	...
+})
+export class StamComponent {
+	constructor(private _http: HttpClient) {
+		const SomeServiceHttp1 = new SomeServiceHttp()
+		const SomeServiceHttp1 = new SomeServiceHttp()
+		const SomeServiceHttp1 = new SomeServiceHttp()
+		const SomeServiceHttp1 = new SomeServiceHttp()
+	}
+}
+```
+
+
 ## Lesson Plan
 
 - Basic DI
