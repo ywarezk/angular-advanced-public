@@ -10,6 +10,9 @@ import { ValidationExampleComponent } from './03-validations/validation-example.
 import { DashPipe } from './05-custom-form-controls/dash.pipe';
 import { PhoneDirective } from './05-custom-form-controls/phone.directive';
 import { CustomFormControlComponent } from './05-custom-form-controls/custom-form-controls.component';
+import { CheckMailDirective } from './06-async-validation/is-email-exist.directive';
+import { EmailFormComponent } from './06-async-validation/email-form.component';
+import { DynamicFormComponent } from './07-dynamic-forms/dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CustomFormControlComponent } from './05-custom-form-controls/custom-for
     ValidationExampleComponent,
     DashPipe,
     PhoneDirective,
-    CustomFormControlComponent
+    CustomFormControlComponent,
+    CheckMailDirective,
+    EmailFormComponent,
+    DynamicFormComponent
   ],
   imports: [
     BrowserModule,
