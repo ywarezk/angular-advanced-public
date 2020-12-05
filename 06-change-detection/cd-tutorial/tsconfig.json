@@ -1,3 +1,4 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -14,15 +15,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "@nz/auth": [
-        "dist/nz/auth/nz-auth",
-        "dist/nz/auth"
-      ],
-      "@nz/auth@dev": [
-        "projects/nz/auth/src/public-api.ts"
-      ]
-    }
+    ]
   }
 }

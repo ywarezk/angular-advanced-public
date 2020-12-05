@@ -1,4 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
 // import { StamService } from './stam.service';
 
 @Component({
@@ -26,6 +27,12 @@ import { Component, Inject } from '@angular/core';
     <router-outlet></router-outlet>
   `,
 })
-export class AppComponent {
-  constructor(@Inject('hello') public hello: string) {}
+export class AppComponent implements OnInit {
+  constructor(@Inject('hello') public hello: string, private _http: HttpClient) {}
+
+  ngOnInit() {
+    // will the interceptor work here?
+    localStorage.setItem('token', 'hello');
+    this._http.get('https://nztodo.herokuapp.com/api/tasks/?format=json').subscribe();
+  }
 }

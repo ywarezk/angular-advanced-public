@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-element-injector-tree',
@@ -13,4 +13,6 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ElementInjectorTreeComponent {
+  constructor(@Inject('hello') public hello: string ) {}
+
 }
